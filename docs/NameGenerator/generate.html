@@ -1,0 +1,19 @@
+<html>
+<head>
+	<p id="demo"></p>
+	<button onclick="genThenPost()">GenerateName</button>
+
+	<script type="text/javascript" src="generateName.js"></script>
+</head>
+<body>
+	
+</body>
+<script>
+
+	function genThenPost() {
+		var newName = generateName();
+		document.getElementById("demo").innerHTML = newName;
+	}
+</script>
+</html>
+
