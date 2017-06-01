@@ -1,0 +1,70 @@
+<!-- //Pull
+//Convert to Array
+//Parse
+//Sum -->
+
+<textarea rows="4" cols="50" id="input">
+5 6 7 8
+</textarea>
+<p>Add numbers to the above ^ textarea. Click the "Pull Elements" button to get the sum of all numbers present in the text.</p>
+
+<button onclick="Pull()">Pull Elements</button>
+
+<p id="demo"></p>
+<p id="sum"></p>
+<p id="tax"></p>
+
+<button id="clip1" onclick="copyToClipboard(document.getElementById('tax').innerHTML)">This is what I want to copy</button>
+
+
+<script>
+
+function copyToClipboard(text) {
+    window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
+}
+
+function Counter() {
+  this.sum = 0;
+  this.count = 0;
+}
+Counter.prototype.add = function(array) {
+  array.forEach(function(entry) {
+  	var curNum = parseFloat(entry);
+    this.sum += curNum;
+    ++this.count;
+  }, this);
+  // ^---- Note
+};
+
+function Pull() {
+
+    //alert(document.getElementById("input").value)
+    
+    var _contents = document.getElementById("input").value;
+    var str = _contents; 
+		var res = str.match(/(-[0-9]+\.[0-9]+)|[0-9]+\.[0-9]+|-[0-9]+|[0-9]+/g);
+    //var acquired = _contents.replace(/[A-z]+/gi,' ')
+		//var parsed = acquired.split(/[\n|\s|,]+/).filter(function(el) {return el.length != 0});
+    var parsed = res.filter(function(el) {return el.length != 0});
+ //acquired.split(/[\n\s,]+/).filter(function(el) {return el.length != 0});
+		//alert(a1);
+    
+    //alert(typeof parseInt(parsed[0]))
+    
+    //Sum Elements
+    var obj = new Counter();
+obj.add(parsed);
+//alert("The Sum is: "+obj.sum)
+    
+   
+ document.getElementById("demo").innerHTML = ("Numbers: "+parsed);   
+ 
+ document.getElementById("sum").innerHTML = ("Sum: "+obj.sum);
+ 
+ document.getElementById("tax").innerHTML = ("Plus Tax: "+(obj.sum*1.1));
+ 
+
+
+
+}
+</script>
