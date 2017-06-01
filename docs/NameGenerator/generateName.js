@@ -47,5 +47,5 @@ adjs = [
   last = capitalize(last);
   prefix = capitalize(prefix);
   
-	return (first+"_"+last+"_"+rnd_num);
+	return (prefix+"_"+first+"_"+last+"_"+rnd_num);
 }
