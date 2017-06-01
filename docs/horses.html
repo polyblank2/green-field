@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>360 Video</title>
+    <meta name="description" content="360 Video — A-Frame">
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <!--script src="aframe-master.js"></script-->
+  </head>
+  <body>
+    <!--img src="Symbol.PNG"-->
+    <a-scene>
+      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+      <a-assets>
+        <video id="video" src="https://ucarecdn.com/0830ed98-ac2f-4e0e-8910-67e4b3fa0de1/"
+               autoplay loop crossorigin></video>
+      </a-assets>
+
+      <a-videosphere src="#video" rotation="0 180 0"></a-videosphere>
+    </a-scene>
+  </body>
+</html>
