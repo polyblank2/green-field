@@ -22,6 +22,13 @@ adjs = [
     "wood", "dream", "cherry", "tree", "fog", "frost", "voice", "paper",
     "frog", "smoke", "star"
   ]
+
+  mood = 
+  [
+  "Absorbed","Adoration","Afraid","Aggravated","Alarmed","Alienated","Amazed","Ambivalent","Amused","Angry","Anguished","Annoyed","Anticipating","Anxious","Aroused","Attraction","Awkward","Bitter","Bored","Brave","Calm","Caring","Cautious","Cheerful","Comfortable","Compassionate","Concern","Confident","Confused","Contempt","Content","Curious","Defeated","Delighted","Depressed","Disappointed","Disgraced","Disgusted","Disillusioned","Disliked","Dismayed","Disoriented","Distracted","Distrusting","Disturbed","Drained","Dreading","Eager","Elated","Embarrassed","Enthusiastic","Envious","Exasperated","Excited","Exhausted","Exhilarated","Fearful","Fondness","Frustrated","Grief","stricken","Grumpy","Guilty","Happy","Hateful","Helpless","Hesitant","Hopeful","Hopeless","Horrified","Hostile","Humiliated","Hurt","Indifferent","Infatuated","Inferior","Insecure","Insulted","Interested","Intrigued","Irritated","Isolated","Jealous","Joyful","Liking","Lonely","Love","Lust","Melancholy","Neglected","Nervous","Numb","Optimistic","Outraged","Overwhelmed","Panicked","Pity","Pleased","Powerless","Preoccupied","Proud","Rageful","Receptive","Regretful","Rejected","Relaxed","Relieved","Resentful","Restless","Revulsion","Sad","Safe","Satisfied","Scared","Scornful","Self","conscious","Shamed","Shocked","Sorrow","Spiteful","Stunned","Suspicious","Sympathy","Tender","Tenderness","Tired","Trust","Trusting","Uncertain","Uncomfortable","Vengeful","Weary","Worried"
+  ];
+
+  rnd_mood = Math.floor(Math.random()*adjs.length)
   rnd_adj = Math.floor(Math.random()*adjs.length)
   rnd_noun = Math.floor(Math.random()*nouns.length)
   rnd_num = rnd = Math.floor(Math.random()*Math.pow(2,12))
@@ -33,10 +40,12 @@ adjs = [
   }
   
   var first=adjs[rnd_adj];
-  var last=nouns[rnd_adj];
+  var last=nouns[rnd_noun];
+  var prefix=mood[rnd_mood];
   
   first = capitalize(first);
   last = capitalize(last);
+  prefix = capitalize(prefix);
   
 	return (first+"_"+last+"_"+rnd_num);
 }
