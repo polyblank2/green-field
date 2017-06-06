@@ -1,0 +1,57 @@
+<h1>
+Discount Calculator
+</h1>
+Original Price is <input type="text" value="0" name="" id="_original" onchange="original_price()"><br>
+<input type="text" value="40" name="" id="_percent" onchange="mPercent()">
+% off is $<input type="text" value="5.99" id="_discounted" onchange="discount()">
+
+<script>
+var disco = document.getElementById('_discounted').value;
+var percent_off = document.getElementById('_percent').value;
+
+var original = disco/(((100-percent_off)/100));
+document.getElementById('_original').value = original;
+
+
+//alert(percent_off);
+
+  function mPercent() {
+  //modify percent -> update discount
+    percent_off = document.getElementById('_percent').value;
+    
+    document.getElementById('_discounted').value = ((100-percent_off)/100)*original;
+    //console.log(percent_off);
+    return 1;
+  }
+
+  function discount() {
+  	/*
+    var discount = document.getElementById('_discount').value;
+    percent_off = document.getElementById('_percent').value;
+    //var original = document.getElementById('_original').value;
+    */
+    //modify discounted_price->modify percent_off
+    //percent_off = disco/original;
+    disco = document.getElementById('_discounted').value;
+    //alert(-(disco/original)*100+100);
+    percent_off = -(disco/original)*100+100;
+    document.getElementById('_percent').value = percent_off;
+    
+    //original_price * (100-percentOff)/100 = disco
+    //percentOff
+    //-percentOff = (disco/original_price)*100-100
+    //percentOff = -(disco/original)*100+100
+    //percent_off = -(disco/original)*100+100
+    
+  }
+
+  function original_price() {
+		//((100-percent_off)/100)*original = discount
+    //original = discount/(((100-percent_off)/100))
+    original = document.getElementById('_original').value;
+    disco = (100-percent_off)/100 * original;
+    //disco = (percent_off)/100 * original;
+    document.getElementById('_discounted').value = disco;
+  }
+
+</script>
