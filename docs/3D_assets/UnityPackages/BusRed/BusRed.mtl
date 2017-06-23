@@ -1,0 +1,21 @@
+newmtl Red
+Kd 0.9338235 0.1785251 0.1941521
+d 1
+
+newmtl White
+Kd 1 1 1
+d 1
+
+newmtl Black
+Kd 0 0 0
+d 1
+
+newmtl Default_Prototype
+map_Kd -o 0 0 -s 1 1 GridBox_Default.png
+Kd 1.0 1.0 1.0
+d 1.0
+
+newmtl BlueDarkGrey_1
+Kd 0.6031033 0.6585491 0.7132353
+d 1
+

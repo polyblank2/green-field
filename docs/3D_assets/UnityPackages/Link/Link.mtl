@@ -1,0 +1,24 @@
+newmtl Brown
+Kd 0.375 0.3422921 0.2564338
+d 1
+
+newmtl Skin
+Kd 1 0.9687627 0.8382353
+d 1
+
+newmtl Black
+Kd 0 0 0
+d 1
+
+newmtl GreenDark
+Kd 0 0.6029412 0.05405676
+d 1
+
+newmtl BlueDark
+Kd 0.1642517 0.4673592 0.7205882
+d 1
+
+newmtl White
+Kd 1 1 1
+d 1
+
