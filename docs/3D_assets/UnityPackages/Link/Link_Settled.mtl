@@ -1,0 +1,19 @@
+# Exported from 3D Builder
+
+newmtl White
+Kd 1.000000 1.000000 1.000000
+
+newmtl GreenDark
+Kd 0.000000 0.600000 0.050980
+
+newmtl Brown
+Kd 0.372549 0.341176 0.254902
+
+newmtl Black
+Kd 0.000000 0.000000 0.000000
+
+newmtl Skin
+Kd 1.000000 0.968628 0.835294
+
+newmtl BlueDark
+Kd 0.160784 0.466667 0.717647
