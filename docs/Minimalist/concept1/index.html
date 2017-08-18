@@ -11,6 +11,10 @@
 		.rolloverimage:hover{
 		background-position: 0 0;
 		}
+		body {
+			font-family: 'Source Sans Pro', sans-serif;
+		}
+
 		.centered {
 		  position: fixed; /* or absolute */
 		  top: 50%;
@@ -18,27 +22,26 @@
 		  margin-top: -90px;
   margin-left: -28px;
 		}
-				.centered2 {
-		  position: fixed; /* or absolute */
-		  top: 50%;
-		  left: 50%;
-		  margin-top: 25px;
-  margin-left: -90px;
+		.pushdown25 {
+			margin-top: 325px;
 		}
 		</style>
+		<link rel="preload" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200italic,400,600,600italic,700" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200italic,400,600,600italic,700"></noscript>
 	</head>
 	<body>
 		<center><a  class="rolloverimage centered"  href="https://bossman2.typeform.com/to/aegjkq">Rollover Image</a></center>
-		<center><h1 id="example2" class="centered2" text="Hire me as a"></h1></center>
-		<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script> 
+		<center><h1 id="example2" class="pushdown25" text="Hire me as a"></h1></center>
+		<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script>
 		<script>
 		$('#example2').typeIt({
 		     strings: ["Developer", "System Engineer", "Python Developer", "Migrator", "Troubleshooter", "Java Developer", ".NET Developer", "Front-End Developer"],
-		     speed: 50,
+		     speed: 60,
 		     breakLines: false,
-		     autoStart: false
+		     autoStart: false,
+				 loop: true
 		});
-		</script> 
+		</script>
 	</body>
 </html>
